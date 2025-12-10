@@ -9,6 +9,11 @@ cat << 'EOF'
 class NetworkManager {
     static let shared = NetworkManager()
     
+    enum NetworkError: Error {
+        case noData
+        case invalidResponse
+    }
+    
     private init() {}
     
     func fetchData(from url: URL, completion: @escaping (Result<Data, Error>) -> Void) {
@@ -19,7 +24,7 @@ class NetworkManager {
             }
             
             guard let data = data else {
-                completion(.failure(NSError(domain: "NetworkManager", code: -1, userInfo: nil)))
+                completion(.failure(NetworkError.noData))
                 return
             }
             
