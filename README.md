@@ -7,7 +7,7 @@ Welcome to my iOS and macOS development repository! This repository serves as a 
 ```
 ├── iOS-Projects/          # iOS application projects
 ├── macOS-Projects/        # macOS application projects
-├── Learning-Series/       # Tutorials, notes, and learning materials
+├── Lectures/       # Tutorials, notes, and learning materials
 └── Resources/            # Useful resources, templates, and tools
 ```
 
@@ -33,9 +33,9 @@ The `macOS-Projects/` directory contains macOS applications including:
 - Command-line tools
 - System utilities
 
-## 📖 Learning Series
+## 📖 Lectures
 
-The `Learning-Series/` directory includes:
+The `Lectures/` directory includes:
 - Tutorial notes and code examples
 - Concepts and explanations
 - Practice exercises
@@ -61,12 +61,6 @@ Each project directory contains its own README with specific instructions for:
 - Xcode (latest version recommended)
 - macOS (for iOS and macOS development)
 - Swift knowledge
-
-## 🤝 Contributing
-
-This is a personal learning repository, but feel free to explore and learn from the code examples.
-
-## 📝 License
 
 This repository is for educational purposes.
 # iOS-development
