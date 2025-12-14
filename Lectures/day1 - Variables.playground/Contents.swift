@@ -50,6 +50,14 @@ print(country)
 var new_name = "ayush"
 var number = 234.23424234 // if i would have written less than 6 digit in total it would have been a float datatype but it's more so compiler took it as double data type.
 
+// Sommetime we often wish to initialze a variable that holds no value for future use, for such we can Use ? to declare values that may be nil.
+
+var nickname: String? = nil
+nickname = "AS"
+print(nickname)
+print(nickname ?? "none")
+
+
 // Let's perform some operations on variables
 print(new_name.uppercased()+" (the uppercase function is used here)") // .uppercase() is a function used to make the strings goes to upper case, just for that instance, it won't modify the original variable.
 print(new_name + " (without uppercase function)")
