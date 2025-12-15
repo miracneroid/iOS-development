@@ -37,9 +37,16 @@ struct MenuView: View {
                     .bold()
                 
                 Spacer()
-                
-                Text("$" + item.price)
-                
+                VStack{
+                    Text("$" + item.price)
+                    Spacer()
+                    Button {
+                        order()
+                    } label: {
+                        Text("Order")
+                    }
+                    
+                }
             }
             .listRowSeparator(.hidden)
             .listRowBackground(
@@ -47,6 +54,9 @@ struct MenuView: View {
                     .opacity(0.1)
             )
         }
+    }
+    func order() {
+        print("Order Placed")
     }
 }
 
