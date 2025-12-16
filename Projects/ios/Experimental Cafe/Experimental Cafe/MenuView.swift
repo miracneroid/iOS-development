@@ -16,41 +16,12 @@ struct MenuView: View {
         
         List(menuItems) {item in
             
-            HStack {
-                Image(item.imageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 50)
-                    .cornerRadius(10)
-                
-                Text(item.name)
-                    .bold()
-                
-                Spacer()
-                VStack{
-                    Text("$" + item.price)
-                    Spacer()
-                    Button {
-                        order()
-                    } label: {
-                        Text("Order")
-                            .foregroundColor(.blue)
-                    }
-                }
-            }
-            .listRowSeparator(.hidden)
-            .listRowBackground(
-                Color(.brown)
-                    .opacity(0.1)
-            )
+            RowView(item: item)
         }
         .listStyle(.plain)
         .onAppear{
             menuItems = dataService.getData()
         }
-    }
-    func order() {
-        print("Order Placed")
     }
 }
 
